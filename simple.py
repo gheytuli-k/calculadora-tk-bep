@@ -1,7 +1,5 @@
-import pandas as pd
+import requests
+import matplotlib
 
-df1 = pd.DataFrame({"A": [1, 2], "B": [3, 4]})
-df2 = pd.DataFrame({"A": [5, 6], "B": [7, 8]})
-
-df_combined = df1.append(df2)
-print(df_combined)
+print("Requests version:", requests.__version__)
+print("Matplotlib version:", matplotlib.__version__)
