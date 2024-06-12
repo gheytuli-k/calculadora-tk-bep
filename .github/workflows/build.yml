@@ -16,9 +16,13 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: 3.x  # Use the latest Python version
-      - name: Install dependencies
+      - name: Install package_a
         run: |
           python -m pip install --upgrade pip
-          pip install package_a package_b
-      - name: Execute Python script with circular dependencies
+          pip install package_a
+      - name: Install package_b
+        run: |
+          python -m pip install --upgrade pip
+          pip install package_b
+      - name: Execute Python script with resolved dependencies
         run: python -c "import package_a; print(package_a.function_a())"
