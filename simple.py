@@ -1,5 +1,3 @@
-import pytorch 
-
 def get_distance(x1, y1, x2, y2):
     """
     Calculate the distance between two points.
