@@ -15,10 +15,10 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
-          python-version: 3.x  
+          python-version: 3.x  # Use the latest Python version
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install pandas==1.5.3
-      - name: Execute Python script
-        run: python simple.py
+          pip install package_a package_b
+      - name: Execute Python script with circular dependencies
+        run: python -c "import package_a; print(package_a.function_a())"
