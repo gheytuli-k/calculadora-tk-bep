@@ -1,1 +1,3 @@
-print("This is a syntax error")
+def print_numbers():
+for i in range(5):
+print(i)
