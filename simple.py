@@ -1,7 +1,5 @@
-height = 24
-width = 48
-radius = 6
-pi = 3.14159
+def add_numbers(x, y):
+    return x + y
 
-circle = pi * radius ** 2
-print(circle)
+result = add_numbers(10, "20")
+print("Result:", result)
