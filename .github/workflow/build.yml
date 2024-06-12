@@ -1,0 +1,13 @@
+name : Project Build
+on: push
+jobs: 
+  build-node:
+    name: Build and Run python project  
+    runs-on: ubuntu-latest
+    steps:
+      - run: python --version
+        name: Check Python version
+      - uses: actions/checkout@v3
+        name: Checkout code from GitHub
+      - name: Execute Python script
+        run: python main.py
