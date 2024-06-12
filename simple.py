@@ -1,1 +1,1 @@
-print("This is a syntax error"
+print("This is a syntax error")
