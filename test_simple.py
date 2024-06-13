@@ -1,13 +1,16 @@
 import unittest
-from simple import add, subtract
+from simple import multiply
+
+import unittest
+from main import multiply
 
 class TestMain(unittest.TestCase):
 
-    def test_add(self):
-        self.assertEqual(add(3, 4), 7)
+    def test_multiply(self):
+        self.assertEqual(multiply(3, 4), 12)  
 
-    def test_subtract(self):
-        self.assertEqual(subtract(10, 5), 5) 
-
+    def test_multiply_incorrect(self):
+        self.assertEqual(multiply(3, 4), 11)  
+        
 if __name__ == '__main__':
     unittest.main()
