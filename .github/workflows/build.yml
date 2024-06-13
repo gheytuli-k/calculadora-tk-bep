@@ -25,6 +25,6 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Execute Python script with infinite loop
+      - name: Execute Python script
         run: |
-          timeout 5s python simple.py || echo "Process terminated due to timeout"
+          timeout 5s python simple.py
