@@ -1,7 +1,5 @@
-def check_number(x):
-    if x > 5:
-        return "x is greater than 5"
+def add(a, b):
+    return a + b
 
-
-result = check_number(15)
-print("Result:", result)
+def subtract(a, b):
+    return a - b
