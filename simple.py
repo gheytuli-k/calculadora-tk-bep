@@ -1,5 +1,2 @@
-def add_numbers(x, y):
-    return x + y
-
-result = add_numbers(10, 20)
-print("Result:", result)
+numbers = [1, 2, 3, 4, 5]
+print("Number at index 4:", numbers[5])
