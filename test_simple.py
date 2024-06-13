@@ -1,16 +1,12 @@
 import unittest
-from simple import multiply
-
-import unittest
-from main import multiply
+from unittest.mock import patch
+from simple import generate_memory_leak
 
 class TestMain(unittest.TestCase):
 
-    def test_multiply(self):
-        self.assertEqual(multiply(3, 4), 12)  
-
-    def test_multiply_incorrect(self):
-        self.assertEqual(multiply(3, 4), 12)  
+    def test_memory_leak(self):
+        big_list = generate_memory_leak()
+        self.assertIsNotNone(big_list)
 
 if __name__ == '__main__':
     unittest.main()

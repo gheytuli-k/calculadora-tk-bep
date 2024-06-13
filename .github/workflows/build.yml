@@ -9,6 +9,8 @@ jobs:
   test-python:
     name: Build, Test, and Run Python Project
     runs-on: ubuntu-latest
+    env:
+      TOTAL_MEMORY: ${{ 16000 }}  
     
     steps:
       - name: Checkout code from GitHub
@@ -24,5 +26,6 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Run Unit Tests
-        run: python -m unittest discover -s . -p "test_*.py"
+      - name: Run Unit Tests with memory monitoring
+        run: |
+          python -m unittest discover -s . -p "test_*.py"
