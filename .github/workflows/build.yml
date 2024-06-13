@@ -10,7 +10,7 @@ jobs:
     name: Build, Test, and Run Python Project
     runs-on: ubuntu-latest
     env:
-      TOTAL_MEMORY: ${{ 16000 }}  
+      TOTAL_MEMORY: ${{ 160 }}  
     
     steps:
       - name: Checkout code from GitHub
