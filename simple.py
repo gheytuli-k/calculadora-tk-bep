@@ -5,7 +5,7 @@ def calculate_area(radius):
 def main():
     radius = 5
     area = calculate_area(radius)
-    assert area == 75.0, f"Assertion failed: {area} != 75.0" 
+    assert area == 78.5, f"Assertion failed: {area} != 78.5"  
     print(f"Area of circle with radius {radius} is {area}")
 
 if __name__ == "__main__":
