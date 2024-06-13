@@ -1,6 +1,6 @@
 import unittest
 from unittest.mock import patch
-from simple import generate_memory_leak
+from simple import my_function
 
 class TestMain(unittest.TestCase):
 
