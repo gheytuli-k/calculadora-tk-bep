@@ -10,7 +10,7 @@ class TestMain(unittest.TestCase):
         self.assertEqual(multiply(3, 4), 12)  
 
     def test_multiply_incorrect(self):
-        self.assertEqual(multiply(3, 4), 11)  
-        
+        self.assertEqual(multiply(3, 4), 12)  
+
 if __name__ == '__main__':
     unittest.main()
