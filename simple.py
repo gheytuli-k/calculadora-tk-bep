@@ -1,7 +1,8 @@
 
-turns = 500
+def check_number(x):
+    if x > 10:
+        return "Greater than 10"
+        print("Function is returning")  
 
-while turns > 0:
-    turns -= 1
-
-print("After 500 turns, the value of turns is 0.")
+result = check_number(15)
+print("Result:", result)
