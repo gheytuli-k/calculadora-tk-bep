@@ -1,7 +1,7 @@
 def check_number(x):
-    if x > 10:
-        return "Greater than 10"
-        print("The function is returning")
+    y = 53
+    if x > 5:
+        return "x is greater than 5"
 
 
 result = check_number(15)
