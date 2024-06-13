@@ -1,7 +1,4 @@
-class MyClass:
-    def __init__(self):
-        self.name = "MyClass"
-        self.attribute = None
+recursive = 500
 
-obj = MyClass()
-print("Attribute:", obj.attribute)
+while recursive > 0:
+    recursive += 1

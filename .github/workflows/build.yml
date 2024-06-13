@@ -9,19 +9,22 @@ jobs:
   build-python:
     name: Build and Run python project  
     runs-on: ubuntu-latest
+    timeout-minutes: 1  # Set a timeout for the job
+    
     steps:
       - name: Checkout code from GitHub
         uses: actions/checkout@v3
-        
+
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
           python-version: 3.x
-          
+
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-          
-      - name: Execute Python script 
-        run: python simple.py
+
+      - name: Execute Python script with infinite loop
+        run: |
+          timeout 5s python simple.py || echo "Process terminated due to timeout"
